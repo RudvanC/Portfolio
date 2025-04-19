@@ -1,0 +1,393 @@
+:root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --my-green: #00a63e;
+  --items-background: #171717;
+  --background-color: #0A0A0A;
+
+  --border-color: #cad4ce;
+  --first-font: "Space Mono", monospace;
+  --text-color: #fff;
+  --secondary-text-color: #737373;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--first-font);
+  color: var(--text-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    ". header header header ."
+    "main main main main main"
+    "footer footer footer footer footer";
+  grid-template-columns: 1fr 1fr 400px 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/*
+============================================================================
+ _   _  _____  ___ ______ ___________ 
+| | | ||  ___|/ _ \|  _  \  ___| ___ \
+| |_| || |__ / /_\ \ | | | |__ | |_/ /
+|  _  ||  __||  _  | | | |  __||    / 
+| | | || |___| | | | |/ /| |___| |\ \ 
+\_| |_/\____/\_| |_/___/ \____/\_| \_|
+                                                                          
+=============================================================================
+*/
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 30px; 
+  background-color: #171717b1;
+  padding: 1rem;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-width: 1200px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+}
+
+.header-items {
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.header-items:hover {
+  transform: translateY(-2px);
+  color: var(--my-green);
+}
+
+/*
+=============================================================================
+ ___  ___  ___  _____ _   _ 
+|  \/  | / _ \|_   _| \ | |
+| .  . |/ /_\ \ | | |  \| |
+| |\/| ||  _  | | | | . ` |
+| |  | || | | |_| |_| |\  |
+\_|  |_/\_| |_/\___/\_| \_/
+                            
+=============================================================================                           
+*/
+
+main {
+  grid-area: main;
+  margin-top: 100px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  justify-self: center;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  padding-bottom: 5px;
+
+  .name-highlight {
+    color: #05DF72;
+  }
+}
+
+.frontend {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-text-color);
+  padding-bottom: 30px;
+}
+
+.descriptive-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.stack-img {
+  display: flex;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.stack-img:hover {
+  background-color: #2d2d31;
+  transform: scale(1.05);
+}
+
+.stack-img img {
+  width: 20px;
+  height: 20px;
+}
+
+/*
+=============================================================================
+_   _  ___________ _____ 
+| | | ||  ___| ___ \  _  |
+| |_| || |__ | |_/ / | | |
+|  _  ||  __||    /| | | |
+| | | || |___| |\ \\ \_/ /
+\_| |_/\____/\_| \_|\___/ 
+
+=============================================================================                           
+*/
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  justify-content: center;
+  padding-bottom: 8rem;
+}
+
+.hero-info {
+  width: 100%;
+  padding: 2rem;
+  padding-right: 2rem;
+}
+
+.hero-personal-info {
+  display: flex;
+  padding-top: 2rem;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.hero-personal-info-image {
+  overflow: hidden;
+  display: flex;
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.hero-personal-info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.hero-info-status {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--items-background);
+  border: 1px solid var(--border-color);
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--my-green);
+    border: 2px solid var(--my-green);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--items-background);
+  }
+
+  p {
+    padding-left: 10px;
+    color: var(--secondary-text-color);
+  }
+}
+
+.hero-basic-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  color: var(--text-color);
+  background-color: var(--items-background);
+  padding: 20px 20px;
+  border-radius: 0px 0px 5px 5px;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.hero-footer > :last-child {
+  color: var(--secondary-text-color);
+}
+
+
+/*
+=============================================================================
+______ _____  _____ _____ ___________ 
+|  ___|  _  ||  _  |_   _|  ___| ___ \
+| |_  | | | || | | | | | | |__ | |_/ /
+|  _| | | | || | | | | | |  __||    / 
+| |   \ \_/ /\ \_/ / | | | |___| |\ \ 
+\_|    \___/  \___/  \_/ \____/\_| \_|
+                                                                                    
+=============================================================================                           
+*/
+
+footer {
+  grid-area: footer;
+  background-color: var(--items-background);
+  padding: 2rem;
+  margin-top: auto;
+}
+
+/*
+=============================================================================
+______ _____ ___________ _____ _   _  _____ _____ _   _ _____ 
+| ___ \  ___/  ___| ___ \  _  | \ | |/  ___|_   _| | | |  ___|
+| |_/ / |__ \ `--.| |_/ / | | |  \| |\ `--.  | | | | | | |__  
+|    /|  __| `--. \  __/| | | | . ` | `--. \ | | | | | |  __| 
+| |\ \| |___/\__/ / |   \ \_/ / |\  |/\__/ /_| |_\ \_/ / |___ 
+\_| \_\____/\____/\_|    \___/\_| \_/\____/ \___/ \___/\____/ 
+                                                                                    
+=============================================================================                           
+*/
+
+@media (max-width: 1024px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr 250px;
+    gap: 1.5rem;
+  }
+
+  .hero-info {
+    padding: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-personal-info {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-info {
+    padding: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-personal-info {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .hero-personal-info-image {
+    max-width: 300px;
+  }
+
+  .tech-stack {
+    justify-content: center;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+    width: 95%;
+    top: 10px;
+  }
+
+  .header-items {
+    width: 100%;
+  }
+
+  .grid-container {
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+    margin-top: 140px;
+  }
+
+  .hero-section {
+    gap: 1.5rem;
+  }
+
+  .hero-info {
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .frontend {
+    font-size: 0.9rem;
+  }
+
+  .descriptive-text {
+    font-size: 0.9rem;
+  }
+
+  .stack-img {
+    padding: 8px 15px;
+    width: 16px;
+    height: 16px;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  header {
+    width: 90%;
+    padding: 0.8rem;
+  }
+}
