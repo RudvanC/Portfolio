@@ -3,7 +3,7 @@
   --color-secondary: #fff;
   --my-green: #00a63e;
   --items-background: #171717;
-  --background-color: #0A0A0A;
+  --background-color: #0a0a0a;
 
   --border-color: #cad4ce;
   --first-font: "Space Mono", monospace;
@@ -67,7 +67,7 @@ header {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  border-radius: 30px; 
+  border-radius: 30px;
   background-color: #171717b1;
   padding: 1rem;
   position: fixed;
@@ -129,7 +129,7 @@ main {
   padding-bottom: 5px;
 
   .name-highlight {
-    color: #05DF72;
+    color: #05df72;
   }
 }
 
@@ -156,20 +156,75 @@ main {
 .stack-img {
   display: flex;
   gap: 10px;
-  border: 1px solid var(--border-color);
   padding: 10px 20px;
   border-radius: 20px;
   align-items: center;
+  border: 2px solid var(--border-color);
 }
 
 .stack-img:hover {
-  background-color: #2d2d31;
   transform: scale(1.05);
 }
 
 .stack-img img {
   width: 20px;
   height: 20px;
+}
+
+/* HTML5 Container */
+.stack-img:has(img[alt="HTML5 logo"]) {
+  border-color: rgba(255, 107, 74, 0.5);
+}
+
+/* CSS3 Container */
+.stack-img:has(img[alt="CSS3 logo"]) {
+  border-color: rgba(58, 143, 214, 0.5);
+}
+
+/* JavaScript Container */
+.stack-img:has(img[alt="JavaScript logo"]) {
+  border-color: rgba(248, 230, 78, 0.5);
+}
+
+/* TypeScript Container */
+.stack-img:has(img[alt="TypeScript logo"]) {
+  border-color: rgba(74, 143, 214, 0.5);
+}
+
+/* React Container */
+.stack-img:has(img[alt="React logo"]) {
+  border-color: rgba(125, 228, 251, 0.5);
+}
+
+/* Angular Container */
+.stack-img:has(img[alt="Angular logo"]) {
+  border-color: rgba(255, 51, 89, 0.5);
+}
+
+/* Astro Container */
+.stack-img:has(img[alt="Astro logo"]) {
+  border-color: rgba(255, 125, 74, 0.5);
+}
+
+/* Node.js Container */
+.stack-img:has(img[alt="Node.js logo"]) {
+  border-color: rgba(77, 179, 77, 0.5);
+}
+
+/* Git Container */
+.stack-img:has(img[alt="Git logo"]) {
+  border-color: rgba(255, 107, 74, 0.5);
+}
+
+/* GitHub Container */
+.stack-img:has(img[alt="GitHub logo"]) {
+  border-color: rgba(51, 51, 51, 0.5);
+}
+
+/* Project Demo and Repository Containers */
+.stack-img:has(img[alt="Página web del proyecto"]),
+.stack-img:has(img[alt="Repositorio del proyecto"]) {
+  border-color: rgba(74, 85, 104, 0.5);
 }
 
 /*
@@ -265,7 +320,81 @@ _   _  ___________ _____
   color: var(--secondary-text-color);
 }
 
+/*
+=============================================================================
+____________ _____   ___ _____ _____ _____ _____ 
+| ___ \ ___ \  _  | |_  |  ___/  __ \_   _/  ___|
+| |_/ / |_/ / | | |   | | |__ | /  \/ | | \ `--. 
+|  __/|    /| | | |   | |  __|| |     | |  `--. \
+| |   | |\ \\ \_/ /\__/ / |___| \__/\ | | /\__/ /
+\_|   \_| \_|\___/\____/\____/ \____/ \_/ \____/ 
+                                                                                            
+=============================================================================                           
+*/
 
+.projects-section {
+  display: flex;
+
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .project-card {
+      display: flex;
+      gap: 2rem;
+
+      .project-img {
+        object-fit: cover;
+        border-radius: 5px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0px;
+
+  a {
+    gap: 10px;
+    color: var(--text-color);
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+.project-info {
+  .tech-stack {
+    padding-top: 0px;
+  }
+}
+
+.redirect-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.link-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 15px;
+}
 /*
 =============================================================================
 ______ _____  _____ _____ ___________ 
@@ -357,7 +486,7 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
   .grid-container {
     grid-template-rows: auto 1fr auto;
   }
-  
+
   footer {
     padding: 1.5rem;
   }
@@ -393,6 +522,11 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
     padding: 8px 15px;
     width: 16px;
     height: 16px;
+
+    a {
+      text-decoration: none;
+      list-style: none;
+    }
   }
 
   footer {
