@@ -177,6 +177,21 @@ main {
   flex-wrap: wrap;
   gap: 10px;
   padding-top: 30px;
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+.contact-links {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+
 }
 
 .stack-img {
@@ -244,7 +259,17 @@ main {
 
 /* GitHub Container */
 .stack-img:has(img[alt="GitHub logo"]) {
-  border-color: rgba(51, 51, 51, 0.5);
+  border-color: rgba(10, 102, 194, 0.5);
+}
+
+/* LinkedIn Container */
+.stack-img:has(img[alt="Linkedin logo"]) {
+  border-color: rgba(10, 102, 194, 0.5);
+}
+
+/* Mail Container */
+.stack-img:has(img[alt="Mail logo"]) {
+  border-color: rgba(234, 67, 53, 0.5);
 }
 
 /* Project Demo and Repository Containers */
@@ -443,6 +468,18 @@ ____________ _____   ___ _____ _____ _____ _____
   .tech-stack {
     padding-top: 0px;
   }
+}
+
+.project-info .stack-img:has(img[alt="HTML"]) {
+  border-color: rgba(255, 107, 74, 0.5);
+}
+
+.project-info .stack-img:has(img[alt="CSS"]) {
+  border-color: rgba(58, 143, 214, 0.5);
+}
+
+.project-info .stack-img:has(img[alt="JS"]) {
+  border-color: rgba(248, 230, 78, 0.5);
 }
 
 .redirect-buttons {
@@ -915,4 +952,3 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
     height: 18px;
   }
 }
-
