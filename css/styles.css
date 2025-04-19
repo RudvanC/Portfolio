@@ -68,7 +68,7 @@ header {
   justify-content: center;
   gap: 1rem;
   border-radius: 30px;
-  background-color: #171717b1;
+  background-color: rgba(23, 23, 23, 0.1);
   padding: 1rem;
   position: fixed;
   top: 20px;
@@ -76,9 +76,10 @@ header {
   transform: translateX(-50%);
   width: 60%;
   max-width: 1200px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .header-items {
@@ -244,7 +245,7 @@ _   _  ___________ _____
   grid-template-columns: 1fr 300px;
   gap: 2rem;
   justify-content: center;
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
 }
 
 .hero-info {
@@ -332,6 +333,14 @@ ____________ _____   ___ _____ _____ _____ _____
 =============================================================================                           
 */
 
+.projects-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 .projects-section {
   display: flex;
 
@@ -378,6 +387,10 @@ ____________ _____   ___ _____ _____ _____ _____
   }
 }
 
+.project-description {
+  color: var(--secondary-text-color);
+}
+
 .project-info {
   .tech-stack {
     padding-top: 0px;
@@ -395,6 +408,94 @@ ____________ _____   ___ _____ _____ _____ _____
   gap: 10px;
   padding-top: 15px;
 }
+
+/*
+=============================================================================
+
+_____ _   _______ _      _      _____ 
+/  ___| | / /_   _| |    | |    /  ___|
+\ `--.| |/ /  | | | |    | |    \ `--. 
+ `--. \    \  | | | |    | |     `--. \
+/\__/ / |\  \_| |_| |____| |____/\__/ /
+\____/\_| \_/\___/\_____/\_____/\____/ 
+                                       
+                                                                               
+=============================================================================                           
+*/
+.tech-scroll-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+  background-color: var(--background-color);
+}
+
+.tech-scroll-container {
+  display: flex;
+  width: fit-content;
+}
+
+.tech-scroll {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.tech-scroll-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tech-scroll-item:hover {
+  transform: scale(1.2);
+}
+
+.tech-scroll-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.tech-tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--items-background);
+  color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+.tech-scroll-item:hover .tech-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: -15px;
+}
+
+.skills-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 5rem;
+  color: var(--text-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 /*
 =============================================================================
 ______ _____  _____ _____ ___________ 
@@ -470,25 +571,50 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
     justify-content: center;
   }
 
-  header {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    justify-content: center;
-    width: 95%;
-    top: 10px;
+  .projects-section {
+    padding: 1.25rem;
   }
 
-  .header-items {
-    width: 100%;
+  .project-card {
+    gap: 1.5rem;
   }
 
-  .grid-container {
-    grid-template-rows: auto 1fr auto;
+  .project-img {
+    max-height: 300px;
+  }
+
+  .project-img img {
+    height: 300px;
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+
+  .project-buttons {
+    gap: 0.75rem;
+  }
+
+  .project-buttons .stack-img {
+    padding: 8px 15px;
+  }
+
+  .project-buttons .stack-img img {
+    width: 18px;
+    height: 18px;
   }
 
   footer {
     padding: 1.5rem;
+  }
+
+  header {
+    width: 95%;
+    padding: 1rem;
   }
 }
 
@@ -518,15 +644,90 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
     font-size: 0.9rem;
   }
 
-  .stack-img {
-    padding: 8px 15px;
-    width: 16px;
-    height: 16px;
+  /* Project styles for mobile */
+  .projects-section {
+    padding: 1rem;
+  }
 
-    a {
-      text-decoration: none;
-      list-style: none;
-    }
+  .projects-container {
+    gap: 3rem !important;
+  }
+
+  .project-card {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .project-img {
+    width: 100% !important;
+    max-height: 200px;
+  }
+
+  .project-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .project-info {
+    width: 100%;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .project-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .project-buttons .stack-img {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .project-buttons .stack-img img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .link-buttons {
+    padding-top: 1rem;
+  }
+
+  /* Tech scroll adjustments */
+  .tech-scroll-item {
+    min-width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+  }
+
+  .tech-scroll-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tech-scroll {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .tech-tooltip {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    bottom: -25px;
+  }
+
+  .tech-scroll-item:hover .tech-tooltip {
+    bottom: -30px;
   }
 
   footer {
@@ -536,5 +737,80 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
   header {
     width: 90%;
     padding: 0.8rem;
+  }
+}
+
+/* Tablet and small desktop styles */
+@media (max-width: 1100px) {
+  .projects-section {
+    padding: 1.5rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .project-img {
+    width: 100%;
+    max-height: 350px;
+  }
+
+  .project-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .project-info {
+    width: 100%;
+  }
+
+  .project-buttons {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 574px) {
+  .projects-section {
+    padding: 1rem;
+  }
+
+  .project-card {
+    gap: 1rem;
+  }
+
+  .project-img {
+    max-height: 250px;
+  }
+
+  .project-img img {
+    height: 250px;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .project-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .project-buttons .stack-img {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .project-buttons .stack-img img {
+    width: 18px;
+    height: 18px;
   }
 }
