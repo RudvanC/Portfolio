@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollContainer.appendChild(clone);
   
   let scrollPosition = 0;
-  const scrollSpeed = 1.6; // pixels per frame
+  const scrollSpeed = 0.8; // pixels per frame
   
   function scroll() {
     scrollPosition -= scrollSpeed;
