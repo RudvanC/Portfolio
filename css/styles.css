@@ -22,6 +22,7 @@
   --secondary-text-color: #737373;
   --color-highlight: #05df72;
   --about-text-color: #c05115d2;
+  --my-purple: #6200ea66;
 }
 
 [data-theme="light"] {
@@ -673,6 +674,7 @@ _____ _   _______ _      _      _____
   gap: 2rem;
   padding: 2rem;
   margin-top: 100px;
+  scroll-margin-top: 100px;
 }
 
 .about-container {
@@ -765,10 +767,44 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
                                                                                                         
 =============================================================================                           
 */
+
+.contact-section {
+  scroll-margin-top: 100px;
+}
+
+.contact-message {
+  color: var(--text-color);
+  font-family: var(--first-font);
+  padding: 20px;
+  background-color: transparent;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-message h3 {
+  color:#7f71f9;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.contact-message p {
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.contact-message strong {
+  color: #51489ed6;
+}
+
+.contact-message h4 {
+  color: var
+}
 .side-content {
+  border: 2px solid var(--border-color);
   background-color: var(--items-background);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 5px;
   gap: 40px;
   display: flex;
   flex-direction: column;
@@ -780,7 +816,6 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
       font-weight: 600;
       justify-content: flex-start;
       text-align: left;
-      padding-right: 10rem;
     }
   }
 }
@@ -792,17 +827,33 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .boton-conoceme {
+  animation: blink-button 3s infinite;
   display: inline-block;
   padding: 12px 28px;
-  background-color: #ffffff;
+  background-color: #ffffff; 
   color: #000;
-  border-radius: 12px;
+  border-radius: 5px;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  box-shadow: 0 0 15px rgba(98, 0, 234, 0.4);
+  box-shadow: 0 0 15px #6200ea66;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+}
+
+@keyframes blink-button {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 5px var(--my-purple), 0 0 10px var(--my-purple);
+  }
+  50% {
+    opacity: 0.2;
+    box-shadow: 0 0 15px var(--my-purple), 0 0 20px var(--my-purple);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 5px var(--my-purple), 0 0 10px var(--my-purple);
+  }
 }
 
 .boton-conoceme:hover {
@@ -811,9 +862,11 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .form-container {
+  display: flex;
+  border: 2px solid var(--border-color);
   background-color: var(--items-background);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .first-contact-text {
@@ -838,6 +891,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .contact-form {
+  justify-content: space-around;
   max-width: 600px;
   margin: 0 auto;
   display: flex;
@@ -850,7 +904,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 .contact-form textarea {
   padding: 15px;
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 1rem;
   outline: none;
   transition: box-shadow 0.3s ease;
@@ -1346,5 +1400,12 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
   [data-theme="dark"] #menu .header-items {
     color: white;
     border-bottom: 1px solid #444;
+  }
+}
+
+
+@media (width < 768px){
+  .contact-section {
+    flex-direction: column;
   }
 }
