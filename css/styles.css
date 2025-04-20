@@ -782,9 +782,9 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .contact-message h3 {
-  color:#7f71f9;
   font-weight: bold;
   margin-bottom: 40px;
+  color: var(--color-highlight);
 }
 
 .contact-message p {
@@ -794,11 +794,11 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .contact-message strong {
-  color: #51489ed6;
+  color: var(--my-green);
 }
 
 .contact-message h4 {
-  color: var
+  color: var;
 }
 .side-content {
   border: 2px solid var(--border-color);
@@ -830,7 +830,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   animation: blink-button 3s infinite;
   display: inline-block;
   padding: 12px 28px;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   color: #000;
   border-radius: 5px;
   text-decoration: none;
@@ -908,6 +908,13 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   font-size: 1rem;
   outline: none;
   transition: box-shadow 0.3s ease;
+  background-color: rgb(46, 45, 45);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 .contact-form input:focus,
@@ -916,10 +923,14 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .contact-form button {
+  background-color: var(--my-green);
+  color: var(--text-color);
+  font-weight: 600;
+  font-family: var(--first-font);
+  cursor: pointer;
   padding: 15px;
   border: none;
   border-radius: 12px;
-  background-color: #007bff;
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
@@ -1403,8 +1414,7 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
   }
 }
 
-
-@media (width < 768px){
+@media (width < 768px) {
   .contact-section {
     flex-direction: column;
   }
