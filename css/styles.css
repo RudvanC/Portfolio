@@ -278,10 +278,12 @@ main {
   border-radius: 20px;
   align-items: center;
   border: 2px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .stack-img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .stack-img img {
@@ -366,6 +368,19 @@ main {
 
 =============================================================================                           
 */
+.blinking {
+  display: inline-block;
+  animation: blink-animation 1s step-end infinite, typing 2s steps(30) 1s 1;
+}
+
+@keyframes blink-animation {
+  50% { opacity: 0; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 1ch; }
+}
 
 .hero-section {
   display: grid;
@@ -780,6 +795,8 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   max-width: 600px;
   margin: 0 auto;
 }
+
+
 
 .contact-message h3 {
   font-weight: bold;
