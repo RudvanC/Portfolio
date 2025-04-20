@@ -114,7 +114,10 @@
                   <p>HTML5</p>
                 </div>
                 <div class="stack-img">
-                  <img src="assets/images/css-3-svgrepo-com.svg" />
+                  <img
+                    src="assets/images/css-3-svgrepo-com.svg"
+                    alt="CSS3 logo"
+                  />
                   <p>CSS3</p>
                 </div>
                 <div class="stack-img">
@@ -452,31 +455,94 @@
             </div>
           </div>
         </section>
+
+        <h2 class="skills-title">Contáctame</h2>
+        <section class="contact-section">
+          <div class="side-content">
+            <div class="texto">
+              <p>
+                <span class="first-contact-text">
+                  ¿Tienes algo que contarme o alguna idea en mente? 😊<br />
+                  Estaré encantado de leerte. <br /><br
+                /></span>
+                <span class="second-contact-text">
+                  Puedes usar el formulario para enviarme un mensaje
+                  directamente desde aquí, <br />
+                  o si prefieres, también puedes escribirme por correo haciendo
+                  clic en el botón de abajo. <br /><br />
+                </span>
+                ¡Prometo responderte lo antes posible!
+              </p>
+            </div>
+            <div class="boton-conoceme-container">
+              <a href="#contacto" class="boton-conoceme">Contactame</a>
+            </div>
+          </div>
+          <div class="form-container">
+            <form
+              action="https://formsubmit.co/tu-correo@ejemplo.com"
+              method="POST"
+              class="contact-form"
+            >
+              <input type="text" name="name" placeholder="Tu nombre" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Tu correo electrónico"
+                required
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tu mensaje"
+                required
+              ></textarea>
+
+              <!-- Opcionales -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://tusitio.com/gracias.html"
+              />
+
+              <button type="submit">Enviar mensaje</button>
+            </form>
+          </div>
+        </section>
       </main>
 
       <footer>
-
         <div class="footer-container">
-
           <div class="text">
-            <p>Rudvan Castro</p>
+            <p>Hecho por Rudvan Castro - 2025🧑🏼‍💻</p>
           </div>
-          
+
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/" target="_blank">
-              <img src="assets/images/black-images/linkedin-svgrepo-com.svg" alt="Linkedin">
+            <a
+              href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/"
+              target="_blank"
+            >
+              <img
+                src="assets/images/black-images/linkedin-svgrepo-com.svg"
+                alt="Linkedin"
+              />
             </a>
             <a href="https://github.com/RudvanC" target="_blank">
-              <img src="assets/images/black-images/github-svgrepo-com.svg" alt="GitHub">
+              <img
+                src="assets/images/black-images/github-svgrepo-com.svg"
+                alt="GitHub"
+              />
             </a>
             <a href="mailto:rudvancastro@gmail.com" target="_blank">
-              <img src="assets/images/black-images/email-1573-svgrepo-com.svg" alt="Email">
+              <img
+                src="assets/images/black-images/email-1573-svgrepo-com.svg"
+                alt="Email"
+              />
             </a>
           </div>
-
         </div>
       </footer>
-
     </div>
     <script src="js/hamburger.js"></script>
     <script src="js/theme.js"></script>

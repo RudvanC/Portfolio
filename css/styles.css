@@ -727,7 +727,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    
+
     .text {
       font-size: 1.2rem;
       font-weight: 600;
@@ -737,7 +737,7 @@ footer {
     .social-links {
       fill: wheat;
 
-      a{
+      a {
         list-style: none;
         text-decoration: none;
         img {
@@ -751,6 +751,152 @@ footer {
         }
       }
     }
+  }
+}
+
+/*
+=============================================================================
+______ ______________  ____   _ _       ___  ______ _____ _____ 
+|  ___|  _  | ___ \  \/  | | | | |     / _ \ | ___ \_   _|  _  |
+| |_  | | | | |_/ / .  . | | | | |    / /_\ \| |_/ / | | | | | |
+|  _| | | | |    /| |\/| | | | | |    |  _  ||    /  | | | | | |
+| |   \ \_/ / |\ \| |  | | |_| | |____| | | || |\ \ _| |_\ \_/ /
+\_|    \___/\_| \_\_|  |_/\___/\_____/\_| |_/\_| \_|\___/ \___/ 
+                                                                                                        
+=============================================================================                           
+*/
+.side-content {
+  background-color: var(--items-background);
+  padding: 2rem;
+  border-radius: 10px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+
+  .texto {
+    p {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      font-weight: 600;
+      justify-content: flex-start;
+      text-align: left;
+      padding-right: 10rem;
+    }
+  }
+}
+
+.boton-conoceme-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.boton-conoceme {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 0 15px rgba(98, 0, 234, 0.4);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.boton-conoceme:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(98, 0, 234, 0.6);
+}
+
+.form-container {
+  background-color: var(--items-background);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.first-contact-text {
+  color: var(--color-highlight);
+}
+.second-contact-text {
+  color: var(--text-color);
+}
+.contact-section {
+  display: flex;
+  gap: 2rem;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInUp 1.2s ease;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
