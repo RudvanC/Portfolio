@@ -17,10 +17,18 @@
     <!-- <h1>Pagina en construcción...</h1> -->
     <div class="grid-container">
       <header>
-        <a href="#projects-section" class="header-items">Proyectos</a>
-        <a href="#skills-section" class="header-items">Skills</a>
-        <a href="#about-section" class="header-items">Acerca de mi</a>
-        <a href="#contact-section" class="header-items">Contacto</a>
+        <nav id="menu" class="hide-item">
+          <a href="#projects-section" class="hide-item header-items"
+            >Proyectos</a
+          >
+          <a href="#skills-section" class="hide-item header-items">Skills</a>
+          <a href="#about-section" class="hide-item header-items"
+            >Acerca de mi</a
+          >
+          <a href="#contact-section" class="hide-item header-items">Contacto</a>
+        </nav>
+
+        <div id="hamburger" class="hamburger">Menú</div>
         <button class="theme-toggle" aria-label="Toggle theme">
           <svg
             class="sun-icon"
@@ -68,70 +76,98 @@
               <div class="contact-links">
                 <a href="mailto:rudvancastro@gmail.com" target="_blank">
                   <div class="stack-img">
-                    <img src="assets/images/mail-svgrepo-com.svg" alt="Mail logo" />
+                    <img
+                      src="assets/images/mail-svgrepo-com.svg"
+                      alt="Mail logo"
+                    />
                     <p>Contáctame</p>
                   </div>
                 </a>
                 <a href="https://github.com/RudvanC" target="_blank">
                   <div class="stack-img">
-                    <img src="assets/images/github-142-svgrepo-com.svg" alt="GitHub logo" />
+                    <img
+                      src="assets/images/github-142-svgrepo-com.svg"
+                      alt="GitHub logo"
+                    />
                     <p>GitHub</p>
                   </div>
                 </a>
-                <a href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/"
+                  target="_blank"
+                >
                   <div class="stack-img">
-                    <img src="assets/images/linkedin-svgrepo-com.svg" alt="Linkedin logo" />
+                    <img
+                      src="assets/images/linkedin-svgrepo-com.svg"
+                      alt="Linkedin logo"
+                    />
                     <p>Linkedin</p>
                   </div>
                 </a>
               </div>
-              <div class="stack-img">
-                <img src="assets/images/html-5-svgrepo-com.svg" alt="HTML5 logo" />
-                <p>HTML5</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/css-3-svgrepo-com.svg" alt="CSS3 logo" />
-                <p>CSS3</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/js-svgrepo-com.svg" alt="JavaScript logo" />
-                <p>JavaScript</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/typescript-svgrepo-com.svg" alt="TypeScript logo" />
-                <p>TypeScript</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/react-svgrepo-com.svg" alt="React logo" />
-                <p>React</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/angular-svgrepo-com.svg" alt="Angular logo" />
-                <p>Angular</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/astro-svgrepo-com.svg" alt="Astro logo" />
-                <p>Astro</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/node-js-svgrepo-com.svg" alt="Node.js logo" />
-                <p>Node.js</p>
-              </div>
-              <div class="stack-img">
-                <img src="assets/images/git-svgrepo-com.svg" alt="Git logo" />
-                <p>Git</p>
+              <div class="tech-stack-technologys">
+                <div class="stack-img">
+                  <img
+                    src="assets/images/html-5-svgrepo-com.svg"
+                    alt="HTML5 logo"
+                  />
+                  <p>HTML5</p>
+                </div>
+                <div class="stack-img">
+                  <img src="assets/images/css-3-svgrepo-com.svg" />
+                  <p>CSS3</p>
+                </div>
+                <div class="stack-img">
+                  <img
+                    src="assets/images/js-svgrepo-com.svg"
+                    alt="JavaScript logo"
+                  />
+                  <p>JavaScript</p>
+                </div>
+                <div class="stack-img">
+                  <img
+                    src="assets/images/typescript-svgrepo-com.svg"
+                    alt="TypeScript logo"
+                  />
+                  <p>TypeScript</p>
+                </div>
+                <div class="stack-img">
+                  <img
+                    src="assets/images/react-svgrepo-com.svg"
+                    alt="React logo"
+                  />
+                  <p>React</p>
+                </div>
+                <div class="stack-img">
+                  <img
+                    src="assets/images/angular-svgrepo-com.svg"
+                    alt="Angular logo"
+                  />
+                  <p>Angular</p>
+                </div>
+                <div class="stack-img">
+                  <img
+                    src="assets/images/astro-svgrepo-com.svg"
+                    alt="Astro logo"
+                  />
+                  <p>Astro</p>
+                </div>
+                <div class="stack-img">
+                  <img
+                    src="assets/images/node-js-svgrepo-com.svg"
+                    alt="Node.js logo"
+                  />
+                  <p>Node.js</p>
+                </div>
+                <div class="stack-img">
+                  <img src="assets/images/git-svgrepo-com.svg" alt="Git logo" />
+                  <p>Git</p>
+                </div>
               </div>
             </div>
           </div>
 
           <article class="hero-personal-info">
-            <div class="hero-personal-info-image">
-              <img
-                src="assets/images/fotoRudvan.png"
-                alt="Imagen de Rudvan Castro con un traje"
-              />
-            </div>
-
             <div class="hero-info-status">
               <span>DISPONIBLE</span>
               <p>Frontend</p>
@@ -380,37 +416,49 @@
           <h2 id="about-section" class="about-title">Acerca de mi</h2>
           <div class="about-container">
             <div class="about-content">
-              <h3>Me llamo Rudvan Castro</h3>
+              <h3>
+                Me llamo <span class="name-highlight">Rudvan Castro</span>
+              </h3>
               <p>
-                <br>
+                <br />
                 Desde pequeño me ha interesado la tecnologia, mis primeros
                 acercamientos a ella fue gracias a mi Colegio, ya que era
                 especializado en sistemas.
                 <br />
-                En los ultimos 3 años de Bachillerato, empezamos a ver programacion,
-                y fue cuando todo cambio para mi,empezamos con un poco de HTML, CSS y JavaScript, 
-                y despues vimos un poco de Java, a medida que pasaba el tiempo, 
-                empecé a tener ganas de aprender mas sobre este mundo.
+                En los ultimos 3 años de Bachillerato, empezamos a ver
+                programacion, y fue cuando todo cambio para mi,empezamos con un
+                poco de HTML, CSS y JavaScript, y despues vimos un poco de Java,
+                a medida que pasaba el tiempo, empecé a tener ganas de aprender
+                mas sobre este mundo.
               </p>
               <p>
-                <br>
-                Actualmente estoy estudiando desarrollo web frontend en
-                Peñascal F5, en Bilbao, Bizkaia.
-                Donde he aprendido muchas cosas, y he tenido la oportunidad de
-                conocer a muchas personas y tener la oportunidad
-                de trabajar en equipo.
+                <br />
+                Actualmente estoy estudiando desarrollo web frontend en Peñascal
+                F5, en Bilbao, Bizkaia. Donde he aprendido muchas cosas, y he
+                tenido la oportunidad de conocer a muchas personas y tener la
+                oportunidad de trabajar en equipo.
               </p>
               <p>
                 Soy una persona muy curiosa, me gusta aprender cosas nuevas y
                 sobre todo me gusta aprender de los demas.
               </p>
             </div>
+
+            <div class="about-image">
+              <img
+                src="assets/images/fotoRudvan.png"
+                alt="Foto de Rudvan Castro"
+              />
+            </div>
           </div>
         </section>
       </main>
 
-      <footer></footer>
+      <footer>
+       
+      </footer>
     </div>
+    <script src="js/hamburger.js"></script>
     <script src="js/theme.js"></script>
   </body>
 </html>
