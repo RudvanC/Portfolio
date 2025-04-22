@@ -374,12 +374,18 @@ main {
 }
 
 @keyframes blink-animation {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 1ch; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 1ch;
+  }
 }
 
 .hero-section {
@@ -752,7 +758,8 @@ footer {
     }
 
     .social-links {
-      fill: wheat;
+      display: flex;
+      flex-wrap: wrap;
 
       a {
         list-style: none;
@@ -796,8 +803,6 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   margin: 0 auto;
 }
 
-
-
 .contact-message h3 {
   font-weight: bold;
   margin-bottom: 40px;
@@ -815,7 +820,8 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .contact-message h4 {
-  color: var;
+  display: flex;
+  justify-content: flex-start;
 }
 .side-content {
   border: 2px solid var(--border-color);
@@ -893,10 +899,12 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   color: var(--text-color);
 }
 .contact-section {
+  width: 100%;
+  justify-content: center;
   display: flex;
   gap: 2rem;
   color: white;
-  padding: 60px 20px;
+  padding: 20px 20px;
   text-align: center;
   font-family: "Segoe UI", sans-serif;
 }
@@ -926,6 +934,14 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   outline: none;
   transition: box-shadow 0.3s ease;
   background-color: rgb(46, 45, 45);
+  border: 2px solid var(--border-color);
+}
+
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea {
+  border: 2px solid var(--border-color);
+  background-color: rgb(255, 255, 255);
+  color: var(--text-color);
 }
 
 .contact-form input::placeholder,
@@ -989,7 +1005,7 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
 | |_/ / |__ \ `--.| |_/ / | | |  \| |\ `--.  | | | | | | |__  
 |    /|  __| `--. \  __/| | | | . ` | `--. \ | | | | | |  __| 
 | |\ \| |___/\__/ / |   \ \_/ / |\  |/\__/ /_| |_\ \_/ / |___ 
-\_| \_\____/\____/\_|    \___/\_| \_/\____/ \___/ \___/\____/ 
+\_|    \___/\_| \_\_|  |_/\___/\_____/\_| |_/\_| \_|\___/ \___/ 
                                                                                     
 =============================================================================                           
 */
@@ -1078,267 +1094,283 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
 
   footer {
     padding: 1.5rem;
+
+    .social-links {
+      a {
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .footer-container {
+      .text {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    header {
+      width: 90%;
+      padding: 1rem;
+    }
   }
 
-  header {
-    width: 90%;
-    padding: 1rem;
-  }
-}
+  @media (max-width: 480px) {
+    main {
+      padding: 1rem;
+      margin-top: 140px;
+      width: 100%;
+    }
 
-@media (max-width: 480px) {
-  main {
-    padding: 1rem;
-    margin-top: 140px;
-    width: 100%;
-  }
+    .tech-stack-technologys {
+      width: 100%;
+    }
 
-  .tech-stack-technologys {
-    width: 100%;
-  }
+    .hero-section {
+      gap: 1.5rem;
+    }
 
-  .hero-section {
-    gap: 1.5rem;
-  }
+    .hero-info {
+      flex-wrap: wrap;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem;
+    }
 
-  .hero-info {
-    flex-wrap: wrap;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem;
-  }
+    .name {
+      font-size: 1.2rem;
+    }
 
-  .name {
-    font-size: 1.2rem;
-  }
+    .frontend {
+      font-size: 0.9rem;
+    }
 
-  .frontend {
-    font-size: 0.9rem;
-  }
+    .descriptive-text {
+      font-size: 0.9rem;
+    }
 
-  .descriptive-text {
-    font-size: 0.9rem;
-  }
+    /* Project styles for mobile */
+    .projects-section {
+      padding: 1rem;
+    }
 
-  /* Project styles for mobile */
-  .projects-section {
-    padding: 1rem;
-  }
+    .projects-container {
+      gap: 3rem !important;
+    }
 
-  .projects-container {
-    gap: 3rem !important;
-  }
+    .project-card {
+      flex-direction: column !important;
+      gap: 1rem !important;
+    }
 
-  .project-card {
-    flex-direction: column !important;
-    gap: 1rem !important;
-  }
+    .project-img {
+      width: 100% !important;
+      max-height: 200px;
+    }
 
-  .project-img {
-    width: 100% !important;
-    max-height: 200px;
-  }
-
-  .project-img img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .project-info {
-    width: 100%;
-  }
-
-  .project-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .project-info p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .project-buttons {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .project-buttons .stack-img {
-    padding: 8px 12px;
-    font-size: 0.8rem;
-  }
-
-  .project-buttons .stack-img img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .link-buttons {
-    padding-top: 1rem;
-  }
-
-  /* Tech scroll adjustments */
-  .tech-scroll-item {
-    min-width: 80px;
-    height: 80px;
-    padding: 0.5rem;
-  }
-
-  .tech-scroll-item img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .tech-scroll {
-    gap: 1rem;
-    padding: 0.5rem;
-  }
-
-  .tech-tooltip {
-    font-size: 0.8rem;
-    padding: 4px 8px;
-    bottom: -25px;
-  }
-
-  .tech-scroll-item:hover .tech-tooltip {
-    bottom: -30px;
-  }
-
-  footer {
-    padding: 1rem;
-  }
-
-  header {
-    width: 90%;
-    padding: 0.8rem;
-  }
-}
-
-/* Tablet and small desktop styles */
-@media (max-width: 1100px) {
-  .projects-section {
-    padding: 1.5rem;
-  }
-
-  .project-card {
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .project-img {
-    width: 100%;
-    max-height: 350px;
-  }
-
-  .project-img img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-  }
-
-  .project-info {
-    width: 100%;
-  }
-
-  .project-buttons {
-    justify-content: center;
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 574px) {
-  .projects-section {
-    padding: 1rem;
-  }
-
-  .project-card {
-    gap: 1rem;
-  }
-
-  .project-img {
-    max-height: 250px;
-  }
-
-  .project-img img {
-    height: 250px;
-  }
-
-  .project-info h3 {
-    font-size: 1.2rem;
-  }
-
-  .project-info p {
-    font-size: 0.9rem;
-  }
-
-  .project-buttons {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .project-buttons .stack-img {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-
-  .project-buttons .stack-img img {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-@media (width < 800px) {
-  .about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0px;
-  }
-
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about-image {
-    justify-content: flex-end;
-    width: 100%;
-    display: flex;
-    object-fit: cover;
-    border-radius: 5px;
-
-    img {
-      width: 200px;
+    .project-img img {
+      width: 100%;
       height: 200px;
       object-fit: cover;
     }
+
+    .project-info {
+      width: 100%;
+    }
+
+    .project-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-info p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .project-buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .project-buttons .stack-img {
+      padding: 8px 12px;
+      font-size: 0.8rem;
+    }
+
+    .project-buttons .stack-img img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .link-buttons {
+      padding-top: 1rem;
+    }
+
+    /* Tech scroll adjustments */
+    .tech-scroll-item {
+      min-width: 80px;
+      height: 80px;
+      padding: 0.5rem;
+    }
+
+    .tech-scroll-item img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .tech-scroll {
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+
+    .tech-tooltip {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      bottom: -25px;
+    }
+
+    .tech-scroll-item:hover .tech-tooltip {
+      bottom: -30px;
+    }
+
+    footer {
+      padding: 1rem;
+    }
+
+    header {
+      width: 90%;
+      padding: 0.8rem;
+    }
   }
-}
 
-@media (width < 480px) {
-  .contact-links {
-    flex-wrap: wrap;
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    margin-bottom: 20px;
-    padding-bottom: 30px;
+  /* Tablet and small desktop styles */
+  @media (max-width: 1100px) {
+    .projects-section {
+      padding: 1.5rem;
+    }
+
+    .project-card {
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .project-img {
+      width: 100%;
+      max-height: 350px;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      width: 100%;
+    }
+
+    .project-buttons {
+      justify-content: center;
+      gap: 1rem;
+    }
   }
-}
 
-@media (width < 440px) {
-}
+  @media (max-width: 574px) {
+    .projects-section {
+      padding: 1rem;
+    }
 
-/*
+    .project-card {
+      gap: 1rem;
+    }
+
+    .project-img {
+      max-height: 250px;
+    }
+
+    .project-img img {
+      height: 250px;
+    }
+
+    .project-info h3 {
+      font-size: 1.2rem;
+    }
+
+    .project-info p {
+      font-size: 0.9rem;
+    }
+
+    .project-buttons {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-buttons .stack-img {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+
+    .project-buttons .stack-img img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (width < 800px) {
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+    }
+
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-image {
+      justify-content: flex-end;
+      width: 100%;
+      display: flex;
+      object-fit: cover;
+      border-radius: 5px;
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media (width < 480px) {
+    .contact-links {
+      flex-wrap: wrap;
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+      padding-bottom: 30px;
+    }
+  }
+
+  @media (width < 440px) {
+  }
+
+  /*
 =============================================================================
 _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___  
 | | | | / _ \ |  \/  || ___ \ | | | ___ \  __ \ | | |  ___/  ___|/ _ \ 
@@ -1351,88 +1383,89 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
 =============================================================================                           
 */
 
-.hamburger {
-  display: none;
-  text-decoration: none;
-  text-align: center;
-  width: 100%;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: var(--text-color);
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-/* Solo aplica en pantallas pequeñas */
-@media (max-width: 600px) {
-  nav {
+  #hamburger {
     display: none;
-  }
-
-  .hamburger {
-    display: flex;
-    justify-content: center;
-  }
-
-  .hide-item {
-    display: none; /* Oculta por defecto */
-    flex-direction: column; /* Opcional, si usas flex */
-    text-align: center; /* Opcional */
-  }
-
-  .hide-item.active {
-    display: flex; /* O usa display: block si prefieres */
-  }
-
-  #menu {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease, padding 0.3s ease, background 0.3s ease,
-      color 0.3s ease;
-    background: white;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    padding: 0;
-  }
-
-  #menu.active {
-    max-height: 500px;
-    padding: 0.5rem 0;
-    border-radius: 20px;
-  }
-
-  #menu .header-items {
+    text-decoration: none;
     text-align: center;
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-    color: black;
-  }
-
-  #menu .header-items:last-child {
-    border-bottom: none;
-  }
-
-  /* 🌓 Modo oscuro con data-theme */
-  [data-theme="dark"] #menu {
-    background: var(--items-background);
-  }
-
-  [data-theme="dark"] #menu .header-items {
-    color: white;
-    border-bottom: 1px solid #444;
-  }
-}
-
-@media (width < 768px) {
-  .contact-section {
+    width: 100%;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  /* Solo aplica en pantallas pequeñas */
+  @media (max-width: 600px) {
+    nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hide-item {
+      display: none; /* Oculta por defecto */
+      flex-direction: column; /* Opcional, si usas flex */
+      text-align: center; /* Opcional */
+    }
+
+    .hide-item.active {
+      display: flex; /* O usa display: block si prefieres */
+    }
+
+    #menu {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease, padding 0.3s ease, background 0.3s ease,
+        color 0.3s ease;
+      background: white;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      padding: 0;
+    }
+
+    #menu.active {
+      max-height: 500px;
+      padding: 0.5rem 0;
+      border-radius: 20px;
+    }
+
+    #menu .header-items {
+      text-align: center;
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      color: black;
+    }
+
+    #menu .header-items:last-child {
+      border-bottom: none;
+    }
+
+    /* 🌓 Modo oscuro con data-theme */
+    [data-theme="dark"] #menu {
+      background: var(--items-background);
+    }
+
+    [data-theme="dark"] #menu .header-items {
+      color: white;
+      border-bottom: 1px solid #444;
+    }
+  }
+
+  @media (width < 768px) {
+    .contact-section {
+      flex-direction: column;
+    }
   }
 }
