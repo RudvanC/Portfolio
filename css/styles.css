@@ -794,7 +794,7 @@ footer {
 
     .social-links {
       display: flex;
-      flex-wrap: wrap;
+
 
       a {
         list-style: none;
@@ -1507,5 +1507,7 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
     header {
       width: 80%;
     }
+
+    
   }
 }
