@@ -99,6 +99,17 @@ nav {
   width: 90%;
 }
 
+/* Make sure the nav menu is visible on desktop */
+#menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hide-item {
+  display: flex; /* Show by default on desktop */
+}
+
 header {
   position: relative;
   grid-area: header;
@@ -111,13 +122,17 @@ header {
   position: fixed;
   top: 20px;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
-  width: 60%;
   max-width: 1200px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
+
+  .hamburger {
+    display: none;
+  }
 }
 
 .header-items {
@@ -267,8 +282,7 @@ main {
   display: flex;
   gap: 10px;
   width: 100%;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
+
 }
 
 .stack-img {
@@ -347,8 +361,29 @@ main {
 }
 
 /* Mail Container */
-.stack-img:has(img[alt="Mail logo"]) {
+.contact-me {
   border-color: rgba(234, 67, 53, 0.5);
+  animation: blink-mail 2s infinite;
+  border: none;
+  border-radius: 0px;
+  background-color: var(--items-background);
+  font-weight: 600;
+  color: var(--my-green);
+}
+
+@keyframes blink-mail {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 5px var(--my-green), 0 0 10px var(--my-green);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 15px var(--my-green), 0 0 20px var(--my-green);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 5px var(--my-green), 0 0 10px var(--my-green);
+  }
 }
 
 /* Project Demo and Repository Containers */
@@ -867,15 +902,15 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 @keyframes blink-button {
   0% {
     opacity: 1;
-    box-shadow: 0 0 5px var(--my-purple), 0 0 10px var(--my-purple);
+    box-shadow: 0 0 5px var(--my-green), 0 0 10px var(--my-green);
   }
   50% {
     opacity: 0.2;
-    box-shadow: 0 0 15px var(--my-purple), 0 0 20px var(--my-purple);
+    box-shadow: 0 0 15px var(--my-green), 0 0 20px var(--my-green);
   }
   100% {
     opacity: 1;
-    box-shadow: 0 0 5px var(--my-purple), 0 0 10px var(--my-purple);
+    box-shadow: 0 0 5px var(--my-green), 0 0 10px var(--my-green);
   }
 }
 
@@ -1015,6 +1050,7 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
     padding: 1.5rem;
   }
 
+  
   .hero-section {
     grid-template-columns: 1fr 250px;
     gap: 1.5rem;
@@ -1123,6 +1159,11 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
       padding: 1rem;
       margin-top: 140px;
       width: 100%;
+    }
+
+    header {
+      width: 90%;
+      padding: 0.8rem;
     }
 
     .tech-stack-technologys {
@@ -1242,11 +1283,6 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
 
     footer {
       padding: 1rem;
-    }
-
-    header {
-      width: 90%;
-      padding: 0.8rem;
     }
   }
 
@@ -1383,7 +1419,7 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
 =============================================================================                           
 */
 
-  #hamburger {
+  .hamburger {
     display: none;
     text-decoration: none;
     text-align: center;
@@ -1404,19 +1440,19 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
       display: none;
     }
 
-    .hamburger {
+    #hamburger {
       display: flex;
       justify-content: center;
     }
 
     .hide-item {
-      display: none; /* Oculta por defecto */
-      flex-direction: column; /* Opcional, si usas flex */
-      text-align: center; /* Opcional */
+      display: none; /* Oculta por defecto en móvil */
+      flex-direction: column;
+      text-align: center;
     }
 
     .hide-item.active {
-      display: flex; /* O usa display: block si prefieres */
+      display: flex;
     }
 
     #menu {
@@ -1466,6 +1502,10 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
   @media (width < 768px) {
     .contact-section {
       flex-direction: column;
+    }
+
+    header {
+      width: 80%;
     }
   }
 }
