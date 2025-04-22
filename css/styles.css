@@ -932,7 +932,6 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   color: var(--text-color);
 }
 .contact-section {
-  width: 100%;
   justify-content: center;
   display: flex;
   gap: 2rem;
