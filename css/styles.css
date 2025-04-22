@@ -825,9 +825,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 =============================================================================                           
 */
 
-.contact-section {
-  scroll-margin-top: 100px;
-}
+
 
 .contact-message {
   color: var(--text-color);
@@ -942,6 +940,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   padding: 20px 20px;
   text-align: center;
   font-family: "Segoe UI", sans-serif;
+  scroll-margin-top: 100px;
 }
 
 .contact-section h2 {
