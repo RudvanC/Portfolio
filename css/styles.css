@@ -36,6 +36,13 @@
   --secondary-text-color: #666666;
 }
 
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea {
+  border: 2px solid var(--border-color);
+  background-color: rgb(255, 255, 255);
+  color: var(--text-color);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -970,12 +977,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   border: 2px solid var(--border-color);
 }
 
-[data-theme="light"] .contact-form input,
-[data-theme="light"] .contact-form textarea {
-  border: 2px solid var(--border-color);
-  background-color: rgb(255, 255, 255);
-  color: var(--text-color);
-}
+
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
