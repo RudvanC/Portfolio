@@ -498,7 +498,7 @@ main {
     border-radius: 5px;
     padding: 5px;
     background-color: var(--items-background);
-    animation: blink 2s infinite;
+    animation: blink-mail 2s infinite;
     position: relative;
   }
 

@@ -71,7 +71,7 @@
   border-radius: 50%;
   top: 85px;
   z-index: 1;
-  animation: pulse 3s infinite, blink 3s infinite;
+  animation: pulse 3s infinite, blink-mail 3s infinite;
 }
 
 @keyframes pulse {
