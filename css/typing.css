@@ -1,0 +1,21 @@
+.typing-text {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: blink 0.7s step-end infinite;
+  
+    /* 👇 evita saltos */
+    display: inline-block;
+    min-width: 200px; /* el ancho de la frase más larga */
+    min-height: 1em;
+  }
+  
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  

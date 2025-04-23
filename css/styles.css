@@ -1,3 +1,5 @@
+@import url(./timeline.css);
+
 /*
 =============================================================================
  _____ _____ _____ _____ 
@@ -34,6 +36,7 @@
   --border-color: #2a2a2a;
   --text-color: #000;
   --secondary-text-color: #666666;
+  --title-color: #000;
 }
 
 [data-theme="light"] .contact-form input,
@@ -252,6 +255,13 @@ main {
   font-weight: 600;
   color: var(--text-color);
   padding-bottom: 5px;
+
+  .terminal {
+    display: flex;
+    .typing-text {
+      align-self: center;
+    }
+  }
 }
 
 .name-highlight {
@@ -289,7 +299,6 @@ main {
   display: flex;
   gap: 10px;
   width: 100%;
-
 }
 
 .stack-img {
@@ -410,9 +419,10 @@ main {
 
 =============================================================================                           
 */
+
 .blinking {
   display: inline-block;
-  animation: blink-animation 1s step-end infinite, typing 2s steps(30) 1s 1;
+  animation: blink-animation 1s step-end infinite, typing 2s steps(80) 0.1s 1;
 }
 
 @keyframes blink-animation {
@@ -423,7 +433,7 @@ main {
 
 @keyframes typing {
   from {
-    width: 0;
+    width: 10rem;
   }
   to {
     width: 1ch;
@@ -802,15 +812,15 @@ footer {
     .social-links {
       display: flex;
 
-
       a {
         list-style: none;
         text-decoration: none;
         img {
           width: 50px;
           height: 50px;
-          filter: grayscale(0.8) brightness(0) invert(0.8);
         }
+
+        /* Remove filter in light mode */
 
         img:hover {
           transform: scale(1.2);
@@ -819,7 +829,13 @@ footer {
     }
   }
 }
+[data-theme="dark"] .social-links a img {
+  filter: grayscale(0.8) brightness(0) invert(0.8);
+}
 
+[data-theme="light"] .social-links a img {
+  filter: grayscale(100%);
+}
 /*
 =============================================================================
 ______ ______________  ____   _ _       ___  ______ _____ _____ 
@@ -832,9 +848,10 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 =============================================================================                           
 */
 
-
-
 .contact-message {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
   color: var(--text-color);
   font-family: var(--first-font);
   padding: 20px;
@@ -977,8 +994,6 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   border: 2px solid var(--border-color);
 }
 
-
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: var(--text-color);
@@ -1050,7 +1065,6 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
     padding: 1.5rem;
   }
 
-  
   .hero-section {
     grid-template-columns: 1fr 250px;
     gap: 1.5rem;
@@ -1507,7 +1521,5 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
     header {
       width: 80%;
     }
-
-    
   }
 }

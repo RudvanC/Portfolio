@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Rudvan Castro</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="shortcut icon" href="assets/images/code-svgrepo-com.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/typing.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/code-svgrepo-com.svg"
+      type="image/x-icon"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
       rel="stylesheet"
@@ -14,9 +19,9 @@
   </head>
 
   <body>
-   <!-- <div class="building">
+    <!-- <div class="building">
       <h1>Pagina en construcción...</h1> -->
- 
+
     <div class="grid-container">
       <header>
         <nav id="menu" class="hide-item">
@@ -24,6 +29,9 @@
             >Proyectos</a
           >
           <a href="#skills-section" class="hide-item header-items">Skills</a>
+          <a href="#education-section" class="hide-item header-items"
+            >Mi educación</a
+          >
           <a href="#about-section" class="hide-item header-items"
             >Acerca de mi</a
           >
@@ -57,14 +65,14 @@
         <section class="hero-section">
           <div class="hero-info">
             <div class="name">
-       
               <div class="terminal">
-              
-                <h1>
-                <span class="blinking"> > </span> Hola, Soy <span class="name-highlight">Rudvan Castro</span>
-              </h1>
+                <h1 class="typing-text"></h1>
+                <div class="name">
+                &nbsp;<span>Soy</span>
+                <span class="name-highlight">Rudvan Castro</span>
+                </div>
+              </div>
             </div>
-          </div>  
             <div class="frontend">
               <p>Desarrollador Web Frontend</p>
             </div>
@@ -82,7 +90,6 @@
               <div class="contact-links">
                 <a href="mailto:rudvancastro@gmail.com" target="_blank">
                   <div class="stack-img contact-me">
-                   
                     <p>Contáctame</p>
                   </div>
                 </a>
@@ -418,6 +425,59 @@
           </div>
         </section>
 
+        <section id="education-section" class="my-education education-section">
+          <h2 class="projects-title">Mi educación</h2>
+          <div class="education-container">
+            <div class="timeline">
+              <div class="timeline-item left">
+                <div class="content">
+                  <div class="img-and-text">
+                    <img
+                      src="assets/images/google-developers-svgrepo-com.svg"
+                      alt="College"
+                    />
+                    <h3>Bootcamp <br /></h3>
+                  </div>
+                  <span>Desarrollo Web Frontend </span>
+                  <div>
+                    <p>Febrero 2025 - Julio 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item right">
+                <div class="content">
+                  <div class="img-and-text">
+                    <h3>Sistemas <br /></h3>
+                    <img
+                      src="assets/images/computing-data-transfer-laptop-svgrepo-com.svg"
+                      alt="College"
+                    />
+                  </div>
+                  <span>Microinformáticos y Redes</span>
+                  <div>
+                    <p>Noviembre 2023 - Julio 2024</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item left">
+                <div class="content">
+                  <div class="img-and-text">
+                    <img
+                      src="assets/images/college-svgrepo-com.svg"
+                      alt="College"
+                    />
+                    <h3>Bachillerato Técnico <br /></h3>
+                  </div>
+                  <span>Especialidad en Informática</span>
+                  <div>
+                    <p>Agosto 2019 - Julio 2021</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="about-section" class="about-section">
           <h2 id="about-section" class="about-title">Acerca de mi</h2>
           <div class="about-container">
@@ -459,27 +519,29 @@
           </div>
         </section>
 
-        <h2 id="contact-section" class="contact-section skills-title">Contáctame</h2>
+        <h2 id="contact-section" class="contact-section skills-title">
+          Contáctame
+        </h2>
         <section class="contact-section">
           <div class="side-content">
             <div class="texto">
-              <p>
-                <div class="contact-message">
-                  <h3>¿Tienes algo que contarme o alguna idea en mente? 😊</h3>
-                  <p><strong>Estaré encantado de leerte.</strong></p>
-                
-                  <p>Puedes usar el boton para enviarme un mensaje correo desde aquí,<br>
-                 </p>
-                
-                  <h4>¡Prometo responderte lo antes posible!</h4>
+              <p></p>
+              <div class="contact-message">
+                <h3>¿Tienes algo que contarme o alguna idea en mente? 😊</h3>
+                <p><strong>Estaré encantado de leerte.</strong></p>
 
-                </div>
+                <p>
+                  Puedes usar el boton para enviarme un mensaje correo desde
+                  aquí,<br />
+                </p>
+
+                <h4>¡Prometo responderte lo antes posible!</h4>
+              </div>
               <a href="mailto:rudvancastro@gmail.com" class="boton-conoceme"
                 >Contactame</a
               >
             </div>
           </div>
-          
         </section>
       </main>
 
@@ -517,5 +579,6 @@
     </div>
     <script src="js/hamburger.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/typing.js"></script>
   </body>
 </html>
