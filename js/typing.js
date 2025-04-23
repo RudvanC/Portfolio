@@ -1,12 +1,12 @@
 const element = document.querySelector('.typing-text');
-const phrases = ["Hola mundo 👋", "Bienvenid@s ❤️",  "¡Vamos allá! 🚀"];
+const phrases = ["Hola mundo 👋", "Bienvenid@s 🤍", "¡Vamos allá!🚀"];
 let i = 0;
 let j = 0;
 let currentPhrase = [];
 let isDeleting = false;
 
 function loop() {
-  const fullPhrase = Array.from(phrases[i]); // 👈 evita cortar emojis
+  const fullPhrase = Array.from(phrases[i]); // evita cortar emojis
 
   if (!isDeleting && j < fullPhrase.length) {
     currentPhrase.push(fullPhrase[j]);
@@ -20,7 +20,7 @@ function loop() {
 
   if (j === fullPhrase.length && !isDeleting) {
     isDeleting = true;
-    setTimeout(loop, 1500); // pausa cuando termina de escribir
+    setTimeout(loop, 2000); // pausa cuando termina de escribir
     return;
   }
 
@@ -29,7 +29,7 @@ function loop() {
     i = (i + 1) % phrases.length;
   }
 
-  const speed = isDeleting ? 50 : 100;
+  const speed = isDeleting ? 100 : 150; // más lento, para que no sea molesto
   setTimeout(loop, speed);
 }
 

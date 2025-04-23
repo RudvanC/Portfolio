@@ -103,6 +103,7 @@
   text-align: left;
 
   h3 {
+    align-self: center;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -129,8 +130,43 @@
   }
 }
 
+
+.hide-text{
+  display: none;
+}
+
+.img-right{
+  display: flex;
+}
+
+
+
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+  
+  .img-right{
+    display: none;
+  }
+
+  .hide-text{
+    display: flex;
+  }
+  
+
+  
+  .timeline {
+    .img-and-text {
+      width: 100%;
+      display: flex;
+  
+      align-items: flex-start;
+      justify-content:flex-start;
+    }
+
+    
+  }
+  
   .timeline::before {
     left: 30px;
   }
@@ -162,6 +198,7 @@
   .timeline-item.left .content h3 {
     justify-content: flex-start;
     align-items: flex-start;
+    align-self: center;
   }
 
   .my-education {

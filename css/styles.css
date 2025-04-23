@@ -132,7 +132,6 @@ header {
   position: fixed;
   top: 20px;
   left: 50%;
-  width: 100%;
   transform: translateX(-50%);
   max-width: 1200px;
   backdrop-filter: blur(10px);
@@ -959,7 +958,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   justify-content: center;
   display: flex;
   gap: 2rem;
-  color: white;
+  color: var(--title-color);
   padding: 20px 20px;
   text-align: center;
   font-family: "Segoe UI", sans-serif;
@@ -1081,6 +1080,9 @@ ______ _____ ___________ _____ _   _  _____ _____ _   _ _____
 }
 
 @media (max-width: 768px) {
+  .tech-scroll-section {
+    padding-bottom: 8rem;
+  }
   .hero-section {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1446,6 +1448,66 @@ _   _   ___  ___  _________ _   _______ _____ _   _ _____ _____  ___
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
+  }
+
+  @media (width < 768px) {
+    .hide-item {
+      display: none; /* Oculta por defecto en móvil */
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav {
+      display: none;
+    }
+
+    #hamburger {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hide-item {
+      display: none; /* Oculta por defecto en móvil */
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hide-item.active {
+      display: flex;
+    }
+
+    #menu {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease, padding 0.3s ease, background 0.3s ease,
+        color 0.3s ease;
+      background: white;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      padding: 0;
+    }
+
+    #menu.active {
+      max-height: 500px;
+      padding: 0.5rem 0;
+      border-radius: 20px;
+    }
+
+    #menu .header-items {
+      text-align: center;
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      color: black;
+    }
+
+    #menu .header-items:last-child {
+      border-bottom: none;
+    }
   }
 
   /* Solo aplica en pantallas pequeñas */
