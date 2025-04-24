@@ -277,6 +277,7 @@ main {
 }
 
 .descriptive-text {
+  max-width: 70ch;
   font-size: 1rem;
   font-weight: 400;
   color: var(--text-color);
