@@ -1,234 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Rudvan Castro</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="css/typing.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/images/code-svgrepo-com.svg"
-      type="image/x-icon"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <script src="js/scroll.js" defer></script>
-  </head>
 
-  <body>
-    <!-- <div class="building">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Rudvan Castro</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/typing.css" />
+  <link rel="shortcut icon" href="assets/images/code-svgrepo-com.svg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <script src="js/scroll.js" defer></script>
+</head>
+
+<body>
+  <!-- <div class="building">
       <h1>Pagina en construcción...</h1> -->
 
-    <div class="grid-container">
-      <header>
-        <nav id="menu" class="hide-item">
-          <a href="#projects-section" class="hide-item header-items"
-            >Proyectos</a
-          >
-          <a href="#skills-section" class="hide-item header-items">Skills</a>
-          <a href="#education-section" class="hide-item header-items"
-            >Educación</a
-          >
-          <a href="#about-section" class="hide-item header-items"
-            >Acerca de mi</a
-          >
-          <a href="#contact-section" class="hide-item header-items">Contacto</a>
-        </nav>
+  <div class="grid-container">
+    <header>
+      <nav id="menu" class="hide-item">
+        <a href="#projects-section" class="hide-item header-items">Proyectos</a>
+        <a href="#skills-section" class="hide-item header-items">Skills</a>
+        <a href="#education-section" class="hide-item header-items">Educación</a>
+        <a href="#about-section" class="hide-item header-items">Acerca de mi</a>
+        <a href="#contact-section" class="hide-item header-items">Contacto</a>
+      </nav>
 
-        <div id="hamburger" class="hamburger">Menú</div>
-        <button class="theme-toggle" aria-label="Toggle theme">
-          <svg
-            class="sun-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 3c.132 0 .263 0 .393 0a8.968 8.968 0 0 0-3.393 6.18c0 4.97 4.03 9 9 9a8.967 8.967 0 0 0 6.18-3.393c0 .13 0 .263 0 .393 0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9z"
-            />
-          </svg>
-          <svg
-            class="moon-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"
-            />
-          </svg>
-        </button>
-      </header>
+      <div id="hamburger" class="hamburger">Menú</div>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 3c.132 0 .263 0 .393 0a8.968 8.968 0 0 0-3.393 6.18c0 4.97 4.03 9 9 9a8.967 8.967 0 0 0 6.18-3.393c0 .13 0 .263 0 .393 0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9z" />
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+        </svg>
+      </button>
+    </header>
 
-      <main>
-        <section class="hero-section">
-          <div class="hero-info">
-            <div class="name">
-              <div class="terminal">
-                <h1 class="typing-text"></h1>
-                <div class="name">
-                &nbsp;<span>Soy</span>
+    <main>
+      <section class="hero-section">
+        <div class="hero-info">
+          <div class="name">
+            <div class="terminal">
+              <h1 class="typing-text"></h1>
+              <div class="name">
+                <span>Soy</span>
                 <span class="name-highlight">Rudvan Castro</span>
-                </div>
               </div>
             </div>
-            <div class="frontend">
-              <p>Desarrollador Web Frontend</p>
+          </div>
+          <div class="frontend">
+            <p>Desarrollador Web Frontend</p>
+          </div>
+          <div class="descriptive-text">
+            <p>
+              Me especializo en el desarrollo frontend utilizando tecnologías
+              modernas para crear experiencias web dinámicas y eficientes.
+              Estoy en constante aprendizaje, explorando nuevas herramientas y
+              metodologías que me permitan evolucionar como profesional y
+              ofrecer soluciones de alto impacto en cada proyecto en el que
+              participo.
+            </p>
+          </div>
+          <div class="tech-stack">
+            <div class="contact-links">
+              <a href="mailto:rudvancastro@gmail.com" target="_blank">
+                <div class="stack-img contact-me">
+                  <img src="assets/images/mail-svgrepo-com.svg" alt="Mail" />
+                  <p>Contáctame</p>
+                </div>
+              </a>
+              <a href="https://github.com/RudvanC" target="_blank">
+                <div class="stack-img contact-social">
+                  <img src="assets/images/github-142-svgrepo-com.svg" alt="GitHub logo" />
+                  <p>GitHub</p>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/" target="_blank">
+                <div class="stack-img contact-social">
+                  <img src="assets/images/linkedin-svgrepo-com.svg" alt="Linkedin logo" />
+                  <p>Linkedin</p>
+                </div>
+              </a>
             </div>
-            <div class="descriptive-text">
-              <p>
-                Me especializo en el desarrollo frontend utilizando tecnologías
-                modernas para crear experiencias web dinámicas y eficientes.
-                Estoy en constante aprendizaje, explorando nuevas herramientas y
-                metodologías que me permitan evolucionar como profesional y
-                ofrecer soluciones de alto impacto en cada proyecto en el que
-                participo.
+
+          </div>
+        </div>
+
+        <article class="hero-personal-info">
+          <div class="hero-info-status">
+            <span>DISPONIBLE</span>
+            <p>Frontend</p>
+          </div>
+          <div class="hero-basic-info">
+            <div class="hero-footer">
+              <span>Nombre:</span> <br /><span>Rudvan Castro</span>
+            </div>
+            <div class="hero-footer">
+              <span>Edad:</span> <br /><span>20 Años</span>
+            </div>
+            <div class="hero-footer">
+              <span>Residencia:</span> <br /><span>📍Barakaldo, Bizkaia</span>
+            </div>
+            <div class="hero-footer">
+              <span>Nacionalidad:</span> <br /><span>☕Colombiano</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <h2 id="projects-section" class="projects-title">Proyectos</h2>
+
+      <section class="projects-section">
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/projecto-cartelera.jpg"
+                alt="Captura de pantalla del proyecto Cartelera de películas" />
+            </div>
+            <div class="project-info">
+              <h3>Cartelera de peliculas</h3>
+              <div class="tech-stack">
+                <div class="project-buttons">
+                  <div class="stack-img">
+                    <img src="assets/images/html-5-svgrepo-com.svg" alt="HTML" />
+                    <p>HTML</p>
+                  </div>
+                  <div class="stack-img">
+                    <img src="assets/images/css-3-svgrepo-com.svg" alt="CSS" />
+                    <p>CSS</p>
+                  </div>
+                  <div class="stack-img">
+                    <img src="assets/images/js-svgrepo-com.svg" alt="JS" />
+                    <p>JavaScript</p>
+                  </div>
+                </div>
+              </div>
+              <p class="project-description">
+                Proyecto de una cartelera de peliculas, en la cual consumimos
+                una API "The Movie DB" y mostramos una lista de peliculas.
+                <br />
+                Además de tener un buscador para buscar peliculas por nombre.
+                <br />
+                Y como extra tiene un bot con IA especializado en peliculas.
               </p>
-            </div>
-            <div class="tech-stack">
-              <div class="contact-links">
-                <a href="mailto:rudvancastro@gmail.com" target="_blank">
-                  <div class="stack-img contact-me">
-                    <p>Contáctame</p>
-                  </div>
-                </a>
-                <a href="https://github.com/RudvanC" target="_blank">
-                  <div class="stack-img">
-                    <img
-                      src="assets/images/github-142-svgrepo-com.svg"
-                      alt="GitHub logo"
-                    />
-                    <p>GitHub</p>
-                  </div>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/"
-                  target="_blank"
-                >
-                  <div class="stack-img">
-                    <img
-                      src="assets/images/linkedin-svgrepo-com.svg"
-                      alt="Linkedin logo"
-                    />
-                    <p>Linkedin</p>
-                  </div>
-                </a>
-              </div>
-              <div class="tech-stack-technologys">
-                <div class="stack-img">
-                  <img
-                    src="assets/images/html-5-svgrepo-com.svg"
-                    alt="HTML5 logo"
-                  />
-                  <p>HTML5</p>
-                </div>
-                <div class="stack-img">
-                  <img
-                    src="assets/images/css-3-svgrepo-com.svg"
-                    alt="CSS3 logo"
-                  />
-                  <p>CSS3</p>
-                </div>
-                <div class="stack-img">
-                  <img
-                    src="assets/images/js-svgrepo-com.svg"
-                    alt="JavaScript logo"
-                  />
-                  <p>JavaScript</p>
-                </div>
-                <div class="stack-img">
-                  <img
-                    src="assets/images/typescript-svgrepo-com.svg"
-                    alt="TypeScript logo"
-                  />
-                  <p>TypeScript</p>
-                </div>
-                <div class="stack-img">
-                  <img
-                    src="assets/images/react-svgrepo-com.svg"
-                    alt="React logo"
-                  />
-                  <p>React</p>
-                </div>
-                <div class="stack-img">
-                  <img
-                    src="assets/images/angular-svgrepo-com.svg"
-                    alt="Angular logo"
-                  />
-                  <p>Angular</p>
-                </div>
-                <div class="stack-img">
-                  <img
-                    src="assets/images/astro-svgrepo-com.svg"
-                    alt="Astro logo"
-                  />
-                  <p>Astro</p>
-                </div>
-                <div class="stack-img">
-                  <img
-                    src="assets/images/node-js-svgrepo-com.svg"
-                    alt="Node.js logo"
-                  />
-                  <p>Node.js</p>
-                </div>
-                <div class="stack-img">
-                  <img src="assets/images/git-svgrepo-com.svg" alt="Git logo" />
-                  <p>Git</p>
+
+              <div class="link-buttons">
+                <div class="project-buttons">
+                  <a href="https://rudvanc.github.io/cartelera/" target="_blank">
+                    <div class="stack-img">
+                      <img src="assets/images/laptop-svgrepo-com.svg" alt="Página web del proyecto" />
+                      <p>Ver Demo</p>
+                    </div>
+                  </a>
+                  <a href="https://github.com/RudvanC/cartelera" target="_blank">
+                    <div class="stack-img">
+                      <img src="assets/images/github-142-svgrepo-com.svg" alt="Repositorio del proyecto" />
+                      <p>Repositorio</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <article class="hero-personal-info">
-            <div class="hero-info-status">
-              <span>DISPONIBLE</span>
-              <p>Frontend</p>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/escaparate-projecto.png"
+                alt="Captura de pantalla del proyecto Escaparate de ropa" />
             </div>
-            <div class="hero-basic-info">
-              <div class="hero-footer">
-                <span>Nombre:</span> <br><span>Rudvan Castro</span>
-              </div>
-              <div class="hero-footer">
-                <span>Edad:</span> <br><span>20 Años</span>
-              </div>
-              <div class="hero-footer">
-                <span>Residencia:</span> <br><span>📍Barakaldo, Bizkaia</span>
-              </div>
-              <div class="hero-footer">
-                <span>Nacionalidad:</span> <br><span>☕Colombiano</span>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <h2 id="projects-section" class="projects-title">Proyectos</h2>
-
-        <section class="projects-section">
-          <div class="projects-container">
-            <div class="project-card">
-              <div class="project-img">
-                <img
-                  src="assets/images/projecto-cartelera.jpg"
-                  alt="Captura de pantalla del proyecto Cartelera de películas"
-                />
-              </div>
-              <div class="project-info">
-                <h3>Cartelera de peliculas</h3>
+            <div class="project-info">
+              <h3>Escaparate de ropa</h3>
+              <div class="project-buttons">
                 <div class="tech-stack">
                   <div class="project-buttons">
                     <div class="stack-img">
-                      <img
-                        src="assets/images/html-5-svgrepo-com.svg"
-                        alt="HTML"
-                      />
+                      <img src="assets/images/html-5-svgrepo-com.svg" alt="HTML" />
                       <p>HTML</p>
                     </div>
                     <div class="stack-img">
-                      <img
-                        src="assets/images/css-3-svgrepo-com.svg"
-                        alt="CSS"
-                      />
+                      <img src="assets/images/css-3-svgrepo-com.svg" alt="CSS" />
                       <p>CSS</p>
                     </div>
                     <div class="stack-img">
@@ -237,352 +190,265 @@
                     </div>
                   </div>
                 </div>
-                <p class="project-description">
-                  Proyecto de una cartelera de peliculas, en la cual consumimos
-                  una API "The Movie DB" y mostramos una lista de peliculas.
-                  <br />
-                  Además de tener un buscador para buscar peliculas por nombre.
-                  <br />
-                  Y como extra tiene un bot con IA especializado en peliculas.
-                </p>
-
-                <div class="link-buttons">
-                  <div class="project-buttons">
-                    <a
-                      href="https://rudvanc.github.io/cartelera/"
-                      target="_blank"
-                    >
-                      <div class="stack-img">
-                        <img
-                          src="assets/images/laptop-svgrepo-com.svg"
-                          alt="Página web del proyecto"
-                        />
-                        <p>Ver Demo</p>
-                      </div></a
-                    >
-                    <a
-                      href="https://github.com/RudvanC/cartelera"
-                      target="_blank"
-                    >
-                      <div class="stack-img">
-                        <img
-                          src="assets/images/github-142-svgrepo-com.svg"
-                          alt="Repositorio del proyecto"
-                        />
-                        <p>Repositorio</p>
-                      </div></a
-                    >
-                  </div>
-                </div>
               </div>
-            </div>
+              <p class="project-description">
+                Proyecto de un escaparate de ropa, en el cual se puede ver una
+                lista de productos y agregarlos al carrito de compras.
+                <br />
+                Los productos son consumidos mediante un JSON.
+              </p>
 
-            <div class="project-card">
-              <div class="project-img">
-                <img
-                  src="assets/images/escaparate-projecto.png"
-                  alt="Captura de pantalla del proyecto Escaparate de ropa"
-                />
-              </div>
-              <div class="project-info">
-                <h3>Escaparate de ropa</h3>
+              <div class="link-buttons">
                 <div class="project-buttons">
-                  <div class="tech-stack">
-                    <div class="project-buttons">
-                      <div class="stack-img">
-                        <img
-                          src="assets/images/html-5-svgrepo-com.svg"
-                          alt="HTML"
-                        />
-                        <p>HTML</p>
-                      </div>
-                      <div class="stack-img">
-                        <img
-                          src="assets/images/css-3-svgrepo-com.svg"
-                          alt="CSS"
-                        />
-                        <p>CSS</p>
-                      </div>
-                      <div class="stack-img">
-                        <img src="assets/images/js-svgrepo-com.svg" alt="JS" />
-                        <p>JavaScript</p>
-                      </div>
+                  <a href="https://rudvanc.github.io/Escaparate/" target="_blank">
+                    <div class="stack-img">
+                      <img src="assets/images/laptop-svgrepo-com.svg" alt="Página web del proyecto" />
+                      <p>Ver Demo</p>
                     </div>
-                  </div>
-                </div>
-                <p class="project-description">
-                  Proyecto de un escaparate de ropa, en el cual se puede ver una
-                  lista de productos y agregarlos al carrito de compras.
-                  <br />
-                  Los productos son consumidos mediante un JSON.
-                </p>
-
-                <div class="link-buttons">
-                  <div class="project-buttons">
-                    <a
-                      href="https://rudvanc.github.io/Escaparate/"
-                      target="_blank"
-                    >
-                      <div class="stack-img">
-                        <img
-                          src="assets/images/laptop-svgrepo-com.svg"
-                          alt="Página web del proyecto"
-                        />
-                        <p>Ver Demo</p>
-                      </div></a
-                    >
-                    <a
-                      href="https://github.com/RudvanC/Escaparate"
-                      target="_blank"
-                    >
-                      <div class="stack-img">
-                        <img
-                          src="assets/images/github-142-svgrepo-com.svg"
-                          alt="Repositorio del proyecto"
-                        />
-                        <p>Repositorio</p>
-                      </div></a
-                    >
-                  </div>
+                  </a>
+                  <a href="https://github.com/RudvanC/Escaparate" target="_blank">
+                    <div class="stack-img">
+                      <img src="assets/images/github-142-svgrepo-com.svg" alt="Repositorio del proyecto" />
+                      <p>Repositorio</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <h2 id="skills-section" class="skills-title">Skills</h2>
-        <section class="tech-scroll-section">
-          <div class="tech-scroll-container">
-            <div class="tech-scroll">
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/html-5-svgrepo-com.svg"
-                  alt="HTML5 logo"
-                />
-                <span class="tech-tooltip">HTML5</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/css-3-svgrepo-com.svg"
-                  alt="CSS3 logo"
-                />
-                <span class="tech-tooltip">CSS3</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/js-svgrepo-com.svg"
-                  alt="JavaScript logo"
-                />
-                <span class="tech-tooltip">JavaScript</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/typescript-svgrepo-com.svg"
-                  alt="TypeScript logo"
-                />
-                <span class="tech-tooltip">TypeScript</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/react-svgrepo-com.svg"
-                  alt="React logo"
-                />
-                <span class="tech-tooltip">React</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/angular-svgrepo-com.svg"
-                  alt="Angular logo"
-                />
-                <span class="tech-tooltip">Angular</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/astro-svgrepo-com.svg"
-                  alt="Astro logo"
-                />
-                <span class="tech-tooltip">Astro</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/node-js-svgrepo-com.svg"
-                  alt="Node.js logo"
-                />
-                <span class="tech-tooltip">Node.js</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img src="assets/images/git-svgrepo-com.svg" alt="Git logo" />
-                <span class="tech-tooltip">Git</span>
-              </div>
-              <div class="tech-scroll-item">
-                <img
-                  src="assets/images/github-142-svgrepo-com.svg"
-                  alt="GitHub logo"
-                />
-                <span class="tech-tooltip">GitHub</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="education-section" class="my-education education-section">
-          <h2 class="projects-title">Mi educación</h2>
-          <div class="education-container">
-            <div class="timeline">
-              <div class="timeline-item left">
-                <div class="content">
-                  <div class="img-and-text">
-                    <img
-                      src="assets/images/google-developers-svgrepo-com.svg"
-                      alt="College"
-                    />
-                    <h3>Bootcamp <br /></h3>
-                  </div>
-                  <span>Desarrollo Web Frontend </span>
-                  <div>
-                    <p>Febrero 2025 - Julio 2025</p>
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-item right">
-                <div class="content">
-                  <div class="hide-text">
-                    <img
-                      src="assets/images/computing-data-transfer-laptop-svgrepo-com.svg"
-                      alt="College"
-                    />
-                    <h3>Sistemas <br /></h3>
-                  </div>
-                  <div class="img-right">
-                    <h3>Sistemas <br /></h3>
-                    <img
-                      src="assets/images/computing-data-transfer-laptop-svgrepo-com.svg"
-                      alt="College"
-                    />
-                  </div>
-                  <span>Microinformáticos y Redes</span>
-                  <div>
-                    <p>Noviembre 2023 - Julio 2024</p>
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-item left">
-                <div class="content">
-                  <div class="img-and-text">
-                    <img
-                      src="assets/images/college-svgrepo-com.svg"
-                      alt="College"
-                    />
-                    <h3>Bachillerato Técnico <br /></h3>
-                  </div>
-                  <span>Especialidad en Informática</span>
-                  <div>
-                    <p>Agosto 2019 - Julio 2021</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="about-section" class="about-section">
-          <h2 id="about-section" class="about-title">Acerca de mi</h2>
-          <div class="about-container">
-            <div class="about-content">
-              <h3>
-                Me llamo <span class="name-highlight">Rudvan Castro</span>
-              </h3>
-              <p>
-                <br />
-                Desde pequeño me ha interesado la tecnologia, y siempre
-                quise aprender mas sobre ella.
-                <br />
-                En el Bachillerato, empezamos a ver
-                programacion, y fue cuando todo cambio para mi,
-                a medida que pasaba el tiempo, empecé a tener ganas de aprender
-                mas sobre este mundo.
-              </p>
-              <p>
-                <br />
-                Actualmente estoy estudiando desarrollo web frontend en Peñascal
-                F5. Donde he aprendido muchas cosas, y he tenido la oportunidad
-                de trabajar en equipo.
-              </p>
-              <p>
-                Soy una persona muy curiosa, me gusta aprender cosas nuevas y
-                sobre todo me gusta aprender de los demas.
-              </p>
-            </div>
-
-            <div class="about-image">
-              <img
-                src="assets/images/fotoRudvan.png"
-                alt="Foto de Rudvan Castro"
-              />
-            </div>
-          </div>
-        </section>
-
-        <h2 id="contact-section" class="contact-section skills-title">
-          Contáctame
-        </h2>
-        <section class="contact-section">
-          <div class="side-content">
-            <div class="texto">
-              <p></p>
-              <div class="contact-message">
-                <h3>¿Tienes algo que contarme o alguna idea en mente? 😊</h3>
-                <p><strong>Estaré encantado de leerte.</strong></p>
-
-                <p>
-                  Puedes usar el boton para enviarme un mensaje correo desde
-                  aquí,<br />
-                </p>
-
-                <h4>¡Prometo responderte lo antes posible!</h4>
-              </div>
-              <a href="mailto:rudvancastro@gmail.com" class="boton-conoceme"
-                >Contactame</a
-              >
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div class="footer-container">
-          <div class="text">
-            <p>Hecho por Rudvan Castro - 2025🧑🏼‍💻</p>
-          </div>
-
-          <div class="social-links">
-            <a
-              href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/"
-              target="_blank"
-            >
-              <img
-                src="assets/images/black-images/linkedin-svgrepo-com.svg"
-                alt="Linkedin"
-              />
-            </a>
-            <a href="https://github.com/RudvanC" target="_blank">
-              <img
-                src="assets/images/black-images/github-svgrepo-com.svg"
-                alt="GitHub"
-              />
-            </a>
-            <a href="mailto:rudvancastro@gmail.com" target="_blank">
-              <img
-                src="assets/images/black-images/email-1573-svgrepo-com.svg"
-                alt="Email"
-              />
-            </a>
           </div>
         </div>
-      </footer>
-    </div>
-    <script src="js/hamburger.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/typing.js"></script>
-  </body>
+      </section>
+
+      <h2 id="skills-section" class="skills-title">Skills</h2>
+      <section class="tech-scroll-section">
+        <div class="tech-scroll-container">
+          <div class="tech-scroll">
+            <div class="tech-scroll-item">
+              <img src="assets/images/html-5-svgrepo-com.svg" alt="HTML5 logo" />
+              <span class="tech-tooltip">HTML5</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/css-3-svgrepo-com.svg" alt="CSS3 logo" />
+              <span class="tech-tooltip">CSS3</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/js-svgrepo-com.svg" alt="JavaScript logo" />
+              <span class="tech-tooltip">JavaScript</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/typescript-svgrepo-com.svg" alt="TypeScript logo" />
+              <span class="tech-tooltip">TypeScript</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/react-svgrepo-com.svg" alt="React logo" />
+              <span class="tech-tooltip">React</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/angular-svgrepo-com.svg" alt="Angular logo" />
+              <span class="tech-tooltip">Angular</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/astro-svgrepo-com.svg" alt="Astro logo" />
+              <span class="tech-tooltip">Astro</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/node-js-svgrepo-com.svg" alt="Node.js logo" />
+              <span class="tech-tooltip">Node.js</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/git-svgrepo-com.svg" alt="Git logo" />
+              <span class="tech-tooltip">Git</span>
+            </div>
+            <div class="tech-scroll-item">
+              <img src="assets/images/github-142-svgrepo-com.svg" alt="GitHub logo" />
+              <span class="tech-tooltip">GitHub</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-text-stack">
+
+          <div class="skills-text">
+            <p>Durante mi proceso de formación como desarrollador Frontend, he tenido la oportunidad de aprender y
+              trabajar con tecnologías modernas a través de un bootcamp intensivo y múltiples cursos especializados.
+            </p><br>
+            <p>Cada tecnología me ha enseñado algo diferente, y sigo aprendiendo todos los días. Me encanta seguir
+              explorando, probando y creando cosas nuevas.</p><br>
+              <p>Gracias a esta experiencia, he desarrollado habilidades sólidas en:</p>
+          </div>
+
+          <div class="tech-stack-container">
+            <div class="tech-stack-technology">
+              <div class="stack-imgs">
+                <p>HTML5</p>
+                <img src="assets/images/html-5-svgrepo-com.svg" alt="HTML5 logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>CSS3</p>
+                <img src="assets/images/css-3-svgrepo-com.svg" alt="CSS3 logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>JavaScript</p>
+                <img src="assets/images/js-svgrepo-com.svg" alt="JavaScript logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>TypeScript</p>
+                <img src="assets/images/typescript-svgrepo-com.svg" alt="TypeScript logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>React</p>
+                <img src="assets/images/react-svgrepo-com.svg" alt="React logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>Angular</p>
+                <img src="assets/images/angular-svgrepo-com.svg" alt="Angular logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>Astro</p>
+                <img src="assets/images/astro-svgrepo-com.svg" alt="Astro logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>Node.js</p>
+                <img src="assets/images/node-js-svgrepo-com.svg" alt="Node.js logo" />
+              </div>
+              <div class="stack-imgs">
+                <p>Git</p>
+                <img src="assets/images/git-svgrepo-com.svg" alt="Git logo" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="education-section" class="my-education education-section">
+        <h2 class="projects-title">Mi educación</h2>
+        <div class="education-container">
+          <div class="timeline">
+            <div class="timeline-item left">
+              <div class="content">
+                <div class="img-and-text">
+                  <img src="assets/images/google-developers-svgrepo-com.svg" alt="College" />
+                  <h3>Bootcamp <br /></h3>
+                </div>
+                <span>Desarrollo Web Frontend </span>
+                <div>
+                  <p>Febrero 2025 - Julio 2025</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="content">
+                <div class="hide-text">
+                  <img src="assets/images/computing-data-transfer-laptop-svgrepo-com.svg" alt="College" />
+                  <h3>Sistemas <br /></h3>
+                </div>
+                <div class="img-right">
+                  <h3>Sistemas <br /></h3>
+                  <img src="assets/images/computing-data-transfer-laptop-svgrepo-com.svg" alt="College" />
+                </div>
+                <span>Microinformáticos y Redes</span>
+                <div>
+                  <p>Noviembre 2023 - Julio 2024</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="content">
+                <div class="img-and-text">
+                  <img src="assets/images/college-svgrepo-com.svg" alt="College" />
+                  <h3>Bachillerato Técnico <br /></h3>
+                </div>
+                <span>Especialidad en Informática</span>
+                <div>
+                  <p>Agosto 2019 - Julio 2021</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-section" class="about-section">
+        <h2 id="about-section" class="about-title">Acerca de mi</h2>
+        <div class="about-container">
+          <div class="about-content">
+            <h3>
+              Me llamo <span class="name-highlight">Rudvan Castro</span>
+            </h3>
+            <p>
+              <br />
+              Desde pequeño me ha interesado la tecnologia, y siempre quise
+              aprender mas sobre ella.
+              <br />
+              En el Bachillerato, empezamos a ver programacion, y fue cuando
+              todo cambio para mi, a medida que pasaba el tiempo, empecé a
+              tener ganas de aprender mas sobre este mundo.
+            </p>
+            <p>
+              <br />
+              Actualmente estoy estudiando desarrollo web frontend en Peñascal
+              F5. Donde he aprendido muchas cosas, y he tenido la oportunidad
+              de trabajar en equipo.
+            </p>
+            <p>
+              Soy una persona muy curiosa, me gusta aprender cosas nuevas y
+              sobre todo me gusta aprender de los demas.
+            </p>
+          </div>
+
+          <div class="about-image">
+            <img src="assets/images/fotoRudvan.png" alt="Foto de Rudvan Castro" />
+          </div>
+        </div>
+      </section>
+
+      <h2 id="contact-section" class="contact-section skills-title">
+        Contáctame
+      </h2>
+      <section class="contact-section">
+        <div class="side-content">
+          <div class="texto">
+            <p></p>
+            <div class="contact-message">
+              <h3>¿Tienes algo que contarme o alguna idea en mente? 😊</h3>
+              <p><strong>Estaré encantado de leerte.</strong></p>
+
+              <p>
+                Puedes usar el boton para enviarme un mensaje correo desde
+                aquí,<br />
+              </p>
+
+              <h4>¡Prometo responderte lo antes posible!</h4>
+            </div>
+            <a href="mailto:rudvancastro@gmail.com" class="boton-conoceme">Contactame</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="text">
+          <p>Hecho por Rudvan Castro - 2025🧑🏼‍💻</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/rudvan-castro-8b21b1354/" target="_blank">
+            <img src="assets/images/black-images/linkedin-svgrepo-com.svg" alt="Linkedin" />
+          </a>
+          <a href="https://github.com/RudvanC" target="_blank">
+            <img src="assets/images/black-images/github-svgrepo-com.svg" alt="GitHub" />
+          </a>
+          <a href="mailto:rudvancastro@gmail.com" target="_blank">
+            <img src="assets/images/black-images/email-1573-svgrepo-com.svg" alt="Email" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/hamburger.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/typing.js"></script>
+</body>
+
 </html>
