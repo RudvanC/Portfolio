@@ -551,6 +551,15 @@ ____________ _____   ___ _____ _____ _____ _____
                                                                                             
 =============================================================================                           
 */
+.hero-section,
+.projects-section,
+.tech-scroll-section,
+.education-section,
+.about-section{
+  margin-bottom: 4rem;
+
+}
+
 
 .projects-title,
 .skills-title,
@@ -573,6 +582,7 @@ ____________ _____   ___ _____ _____ _____ _____
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  margin-bottom: 6rem;
 
   .projects-container {
     display: flex;
