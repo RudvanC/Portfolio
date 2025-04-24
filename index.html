@@ -273,7 +273,7 @@
             </p><br>
             <p>Cada tecnología me ha enseñado algo diferente, y sigo aprendiendo todos los días. Me encanta seguir
               explorando, probando y creando cosas nuevas.</p><br>
-              <p>Gracias a esta experiencia, he desarrollado habilidades sólidas en:</p>
+            <p>Gracias a esta experiencia, he desarrollado habilidades sólidas en:</p>
           </div>
 
           <div class="tech-stack-container">
@@ -411,7 +411,7 @@
             <p></p>
             <div class="contact-message">
               <h3>¿Tienes algo que contarme o alguna idea en mente? 😊</h3>
-              <p><strong>Estaré encantado de leerte.</strong></p>
+              <p>Estaré encantado de leerte.</p>
 
               <p>
                 Puedes usar el boton para enviarme un mensaje correo desde
@@ -422,6 +422,26 @@
             </div>
             <a href="mailto:rudvancastro@gmail.com" class="boton-conoceme">Contactame</a>
           </div>
+        </div>
+        <div class="form-container">
+          <form name="contact" method="POST" data-netlify="true" class="contact-form" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>No llenar esto: <input name="bot-field" /></label>
+            </p>
+
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" required />
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required />
+
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+
+            <button type="submit" class="boton-conoceme">Enviar</button>
+          </form>
+
         </div>
       </section>
     </main>

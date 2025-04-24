@@ -958,8 +958,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   .texto {
     p {
       color: var(--text-color);
-      font-size: 1.2rem;
-      font-weight: 600;
+      font-family: var(--first-font);
       justify-content: flex-start;
       text-align: left;
     }
@@ -973,7 +972,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
 }
 
 .boton-conoceme {
-  animation: blink-button 3s infinite;
+ 
   display: inline-block;
   padding: 12px 28px;
   background-color: #ffffff;
@@ -982,7 +981,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  box-shadow: 0 0 15px #6200ea66;
+  box-shadow: 0 0 15px var(--my-green);
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
@@ -1002,10 +1001,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   }
 }
 
-.boton-conoceme:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(98, 0, 234, 0.6);
-}
+
 
 .form-container {
   display: flex;
@@ -1038,15 +1034,7 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   animation: fadeInDown 1s ease;
 }
 
-.contact-form {
-  justify-content: space-around;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  animation: fadeInUp 1.2s ease;
-}
+
 
 .contact-form input,
 .contact-form textarea {
@@ -1066,28 +1054,11 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
   font-weight: 600;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
-}
 
-.contact-form button {
-  background-color: var(--my-green);
-  color: var(--text-color);
-  font-weight: 600;
-  font-family: var(--first-font);
-  cursor: pointer;
-  padding: 15px;
-  border: none;
-  border-radius: 12px;
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+
+
 
 .contact-form button:hover {
-  background-color: #0056b3;
   transform: scale(1.05);
 }
 
@@ -1113,6 +1084,40 @@ ______ ______________  ____   _ _       ___  ______ _____ _____
     transform: translateY(0);
   }
 }
+
+
+
+.contact-form label {
+  display: block;
+  color: var(--color-highlight);
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-highlight);
+  box-shadow: 0 0 10px rgba(5, 223, 114, 0.4);
+}
+
+.contact-form .hidden {
+  display: none;
+}
+
+
 
 /*
 =============================================================================
